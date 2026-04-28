@@ -22,7 +22,7 @@ import platform
 # ─────────────────────────────────────────
 # ⚙️  CONFIG — Update API_URL after deploying to Render!
 # ─────────────────────────────────────────
-API_URL = "https://YOUR-APP-NAME.onrender.com/detect"   # ← update after Render deploy
+API_URL = "https://terratrace-bm16.onrender.com/alert"   # ← update after Render deploy
 
 DEVICE_CONFIG = {
     "device_id": "TerraTrace-Node-01",
@@ -82,7 +82,9 @@ def send_to_api(wav_path):
                 },
                 timeout=30
             )
-        return response.json()
+        data = response.json()
+        print("DEBUG:", data)
+        return data
     except requests.exceptions.ConnectionError:
         print("   ❌ Cannot reach API — check your Render URL")
         return None
