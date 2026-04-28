@@ -1,0 +1,13 @@
+venv/
+dataset/
+*.h5
+*.pkl
+*.zip
+serviceAccountKey.json
+__pycache__/
+*.pyc
+*.pyo
+.env
+.vscode/
+*.tmp
+*.log 
