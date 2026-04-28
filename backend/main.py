@@ -37,7 +37,8 @@ try:
         key_dict = json.loads(firebase_key)
         cred = credentials.Certificate(key_dict)
     else:
-        cred = credentials.Certificate("serviceAccountKey.json")
+        firebase_key = json.loads(os.environ["FIREBASE_KEY"])
+        cred = credentials.Certificate(firebase_key)
     firebase_admin.initialize_app(cred)
     db = firestore.client()
     print("Firebase connected!")
