@@ -3,3 +3,7 @@ uvicorn
 firebase-admin
 python-multipart
 pydantic
+protobuf>=4.25.8,<5.0.0
+tensorflow==2.16.2
+firebase-admin>=6.0.0
+google-cloud-firestore>=2.11.0
